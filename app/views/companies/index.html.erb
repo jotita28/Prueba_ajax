@@ -5,9 +5,18 @@
 <%= render 'form', company: @company%>
 <br>
 <h2>Empresas agregadas:</h4>
-<ol id="companies">
-    <%= render @companies%>
-</ol>
+<table class="table table-hover">
+  <thead class="thead thead-dark">
+    <tr>
+      <th></th>
+      <th>Company</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+        <%= render @companies%>
+  </tbody>
+</table>
 
 
 

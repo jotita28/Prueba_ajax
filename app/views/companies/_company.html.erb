@@ -1,4 +1,7 @@
-<li id="<%=company.id%>"> <%= company.name %> - 
-<%= link_to 'Show', company_path(company), class: 'btn btn-success btn-sm', data: {remote:true}%>
+<tr id="<%=company.id%>">
+<td id="<%=company.id%>"> </td>
+<td><%= company.name %> </td> 
+<td><%= link_to 'Show', company_path(company), class: 'btn btn-success btn-sm', data: {remote:true}%>
 <%= link_to 'Edit', edit_company_path(company), class: 'btn btn-info btn-sm', data: {remote:true}%>
-<%= link_to 'Destroy', company, method: :delete, class: 'btn btn-danger btn-sm', data: {confirm: 'Estas seguro?', remote: true}%></li>
+<%= link_to 'Destroy', company, method: :delete, class: 'btn btn-danger btn-sm', data: {confirm: 'Estas seguro?', remote: true}%></td>
+</tr>

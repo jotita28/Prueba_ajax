@@ -10,8 +10,8 @@
 </div>
 <%end%>
 
-<ul>
-<% company.complaints.each do |complaint|%>
+<ul id="complaint">
+<% company.complaints.order(created_at: :desc).each do |complaint|%>
     <li> <%=complaint.created_at.strftime('%d/%m/%y %H:%M')%> - <%= complaint.content%></li>
 <%end%>
 </ul>
