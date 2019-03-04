@@ -1,0 +1,17 @@
+<%= form_with(model: [company, complaint]) do |f|%>
+
+<div class="field">
+    <%=f.label :content%>
+    <%=f.text_area :content%>
+</div>
+
+<div class="actions">
+    <%=f.submit%>
+</div>
+<%end%>
+
+<ul>
+<% company.complaints.each do |complaint|%>
+    <li> <%=complaint.created_at.strftime('%d/%m/%y %H:%M')%> - <%= complaint.content%></li>
+<%end%>
+</ul>
